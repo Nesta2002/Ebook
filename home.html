@@ -1,0 +1,522 @@
+<html>
+    <head>
+        <title>Welcome</title>
+        <link rel="stylesheet" href="style.css">
+        <style>
+            .carousel-open:checked + .carousel-item {
+				position: static;
+				opacity: 100;
+			}
+			.carousel-item {
+				-webkit-transition: opacity 0.6s ease-out;
+				transition: opacity 0.6s ease-out;
+			}
+			#carousel-1:checked ~ .control-1,
+			#carousel-2:checked ~ .control-2,
+			#carousel-3:checked ~ .control-3 {
+				display: block;
+			}
+			.carousel-indicators {
+				list-style: none;
+				margin: 0;
+				padding: 0;
+				position: absolute;
+				bottom: 2%;
+				left: 0;
+				right: 0;
+				text-align: center;
+				z-index: 10;
+            }
+            #carousel-1:checked ~ .control-1 ~ .carousel-indicators li:nth-child(1) .carousel-bullet,
+			#carousel-2:checked ~ .control-2 ~ .carousel-indicators li:nth-child(2) .carousel-bullet,
+			#carousel-3:checked ~ .control-3 ~ .carousel-indicators li:nth-child(3) .carousel-bullet {
+				color: #2b6cb0;  /*Set to match the Tailwind colour you want the active one to be */
+			}
+        </style>
+    </head>
+    <body class="bg-scroll font-sans leading-normal tracking-normal" style="background-image: url(assets/google-next-landing-page-background-01.png)">
+        <!--Nav-->
+	    <nav id="header" class="fixed w-full z-30 top-0 text-white bg-white">
+
+            <div class="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 py-2">
+                    
+                <div class="pl-4 flex items-center">
+                    <a class="toggleColour text-black no-underline hover:no-underline font-bold text-2xl lg:text-4xl"  href="#"> 
+                        <!--Icon from: http://www.potlabicons.com/ -->
+                         eBook Free
+                    </a>
+                </div>
+        
+                <div class="block lg:hidden pr-4">
+                    <button id="nav-toggle" class="flex items-center p-1 text-orange-800 hover:text-gray-900">
+                        <svg class="fill-current h-6 w-6" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Menu</title><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/></svg>
+                    </button>
+                </div>
+        
+                <div class="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden lg:block mt-2 lg:mt-0 bg-white lg:bg-transparent text-black p-4 lg:p-0 z-20" id="nav-content">
+                    <ul class="list-reset lg:flex justify-end flex-1 items-center">
+                        <li class="mr-3">
+                            <a class="inline-block py-2 px-4 text-black font-bold no-underline" href="home.html">Home</a>
+                        </li>
+                        <li class="mr-3">
+                            <a class="inline-block py-2 px-4 text-black hover:font-bold no-underline" href="about.html">About</a>
+                        </li>
+                        <li class="mr-3">
+                            <a class="inline-block py-2 px-4 text-black hover:font-bold no-underline" href="contact.html">Contact</a>
+                        </li>
+                    </ul>
+                    <a href="register.html">
+                        <button class="mx-auto lg:mx-0 bg-gray-500 text-white font-bold rounded mt-4 lg:mt-0 py-2 px-6 shadow opacity-75 hover:bg-gray-800">Sign Up</button>
+                    </a>
+                </div>
+            </div>
+            
+            <hr class="border-b border-gray-800 opacity-75 my-0 py-0" />
+        </nav>
+
+	    <!--Hero-->
+	    <div class="container mx-auto flex flex-col md:flex-row items-center my-5 md:mb-5 md:mt-20">
+		    <!--Left Col-->
+		    <div class="flex flex-col w-full lg:w-1/2 justify-center items-start pt-12 pb-24 px-6">
+			    <p class="text-2xl tracking-loose">eBook Free</p>
+			    <h1 class="font-bold text-4xl my-4">Get a free book here</h1>
+                <p class="leading-normal mb-4">eBook Free is a place where you can download eBooks easily and for free. You can also subscribe by registering first and logging in with your account.</p>
+                <a href="login.html">
+                    <button class="mx-auto lg:mx-0 bg-transparent border border-gray-800 text-gray-800 hover:text-white font-bold rounded mt-4 lg:mt-0 py-2 px-6 shadow opacity-75 hover:bg-gray-800">Log In</button>
+                </a>
+		    </div>
+		    <!--Right Col-->
+		    <div class="w-full lg:w-1/2 lg:py-6 text-center">
+			<!--Add your product image here-->
+			<svg class="fill-current text-gray-900 w-3/5 mx-auto" version="1.1" id="Open_book" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+            viewBox="0 0 20 20" enable-background="new 0 0 20 20" xml:space="preserve">
+            <path d="M10.595,5.196l0.446,1.371c0.369-0.316,0.835-0.599,1.441-0.795c0.59-0.192,1.111-0.3,1.582-0.362l-0.43-1.323
+                c-0.476,0.069-1.001,0.18-1.58,0.368C11.476,4.643,10.999,4.905,10.595,5.196z M11.522,8.051l0.446,1.371
+                c0.369-0.316,0.835-0.599,1.441-0.795c0.59-0.192,1.111-0.3,1.582-0.362l-0.43-1.323c-0.476,0.069-1.001,0.18-1.58,0.368
+                C12.403,7.497,11.927,7.759,11.522,8.051z M12.45,10.905l0.446,1.371c0.369-0.316,0.835-0.599,1.441-0.795
+                c0.59-0.192,1.111-0.3,1.582-0.362l-0.43-1.323c-0.476,0.069-1.001,0.18-1.58,0.368C13.33,10.351,12.854,10.614,12.45,10.905z
+                M5.388,13.077l0.43,1.323c0.417-0.226,0.902-0.445,1.492-0.636c0.606-0.197,1.149-0.242,1.633-0.203l-0.446-1.371
+                c-0.499,0.002-1.038,0.07-1.615,0.257C6.303,12.635,5.813,12.853,5.388,13.077z M3.533,7.368l0.43,1.323
+                C4.38,8.465,4.865,8.247,5.455,8.055c0.606-0.197,1.149-0.242,1.633-0.203L6.643,6.48C6.144,6.483,5.605,6.55,5.027,6.738
+                C4.448,6.926,3.958,7.144,3.533,7.368z M4.46,10.223l0.43,1.323c0.417-0.226,0.902-0.445,1.492-0.636
+                c0.606-0.197,1.149-0.242,1.633-0.203L7.57,9.335c-0.499,0.002-1.038,0.07-1.615,0.257C5.376,9.78,4.885,9.999,4.46,10.223z
+                M11.064,1.41C9.341,1.97,8.441,3.162,8.011,3.969c-0.822-0.4-2.25-0.835-3.973-0.275c-2.523,0.82-3.969,2.627-3.969,2.627
+                l4.095,12.587c0.126,0.387,0.646,0.477,0.878,0.143c0.499-0.719,1.46-1.658,3.257-2.242c1.718-0.558,2.969,0.054,3.655,0.578
+                c0.272,0.208,0.662,0.06,0.762-0.268c0.252-0.827,0.907-2.04,2.61-2.593c1.799-0.585,3.129-0.389,3.956-0.1
+                c0.385,0.134,0.75-0.242,0.625-0.629L15.819,1.203C15.819,1.203,13.587,0.591,11.064,1.41z M10.951,15.256
+                c-0.819-0.244-1.901-0.358-3.141,0.044c-1.251,0.406-2.127,0.949-2.699,1.404L1.866,6.722C2.224,6.364,3.053,5.68,4.528,5.201
+                c1.389-0.451,2.528-0.065,3.279,0.378L10.951,15.256z M17.845,12.567c-0.731-0.032-1.759,0.044-3.01,0.451
+                c-1.24,0.403-2.048,1.132-2.567,1.81L9.124,5.151c0.346-0.8,1.04-1.782,2.43-2.233c1.474-0.479,2.547-0.413,3.047-0.334
+                L17.845,12.567z"/></svg>
+		    </div>
+        </div>
+
+        <!-- Carousel -->
+        <div class="carousel relative bg-white">
+            <div class="carousel-inner relative overflow-hidden w-full">
+              <!--Slide 1-->
+              <input class="carousel-open" type="radio" id="carousel-1" name="carousel" aria-hidden="true" hidden="" checked="checked">
+              <div class="carousel-item absolute opacity-0" style="height:50vh;">
+                  <div class="block h-full w-full mx-auto flex pt-6 md:pt-0 md:items-center bg-cover bg-right" style="background-image: url('https://images.unsplash.com/photo-1422190441165-ec2956dc9ecc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1600&q=80');">
+  
+                      <div class="container mx-auto">
+                          <div class="flex flex-col w-full lg:w-1/2 md:ml-16 items-center md:items-start px-6 tracking-wide">
+                              <p class="text-black text-2xl my-4">Easy Cook | Nesta Alsya</p>
+                          </div>
+                      </div>
+  
+                  </div>
+              </div>
+              <label for="carousel-3" class="prev control-1 w-10 h-10 ml-2 md:ml-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-gray-900 leading-tight text-center z-10 inset-y-0 left-0 my-auto">‹</label>
+              <label for="carousel-2" class="next control-1 w-10 h-10 mr-2 md:mr-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-gray-900 leading-tight text-center z-10 inset-y-0 right-0 my-auto">›</label>
+                
+                <!--Slide 2-->
+                <input class="carousel-open" type="radio" id="carousel-2" name="carousel" aria-hidden="true" hidden="">
+            <div class="carousel-item absolute opacity-0 bg-cover bg-right" style="height:50vh;">
+                <div class="block h-full w-full mx-auto flex pt-6 md:pt-0 md:items-center bg-cover bg-right" style="background-image: url('https://images.unsplash.com/photo-1533090161767-e6ffed986c88?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjM0MTM2fQ&auto=format&fit=crop&w=1600&q=80');">
+
+                    <div class="container mx-auto">
+                        <div class="flex flex-col w-full lg:w-1/2 md:ml-16 items-center md:items-start px-6 tracking-wide">
+                            <p class="text-black text-2xl my-4">CodeIgniter | Ibnu Daqiqil</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <label for="carousel-1" class="prev control-2 w-10 h-10 ml-2 md:ml-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-gray-900  leading-tight text-center z-10 inset-y-0 left-0 my-auto">‹</label>
+            <label for="carousel-3" class="next control-2 w-10 h-10 mr-2 md:mr-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-gray-900  leading-tight text-center z-10 inset-y-0 right-0 my-auto">›</label>
+                
+                <!--Slide 3-->
+                <input class="carousel-open" type="radio" id="carousel-3" name="carousel" aria-hidden="true" hidden="">
+            <div class="carousel-item absolute opacity-0" style="height:50vh;">
+                <div class="block h-full w-full mx-auto flex pt-6 md:pt-0 md:items-center bg-cover bg-bottom" style="background-image: url('https://images.unsplash.com/photo-1519327232521-1ea2c736d34d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1600&q=80');">
+
+                    <div class="container mx-auto">
+                        <div class="flex flex-col w-full lg:w-1/2 md:ml-16 items-center md:items-start px-6 tracking-wide">
+                            <p class="text-black text-2xl my-4">Draw 50 Animal | Lee J. Ames</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <label for="carousel-2" class="prev control-3 w-10 h-10 ml-2 md:ml-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-gray-900  leading-tight text-center z-10 inset-y-0 left-0 my-auto">‹</label>
+            <label for="carousel-1" class="next control-3 w-10 h-10 mr-2 md:mr-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-gray-900  leading-tight text-center z-10 inset-y-0 right-0 my-auto">›</label>
+                
+                <!-- Add additional indicators for each slide-->
+		        <ol class="carousel-indicators">
+			        <li class="inline-block mr-3">
+				        <label for="carousel-1" class="carousel-bullet cursor-pointer block text-4xl text-white hover:text-blue-700">•</label>
+			        </li>
+			        <li class="inline-block mr-3">
+				        <label for="carousel-2" class="carousel-bullet cursor-pointer block text-4xl text-white hover:text-blue-700">•</label>
+			        </li>
+			        <li class="inline-block mr-3">
+				        <label for="carousel-3" class="carousel-bullet cursor-pointer block text-4xl text-white hover:text-blue-700">•</label>
+			        </li>
+		        </ol>
+	        </div>
+        </div>
+        
+	    <!-- Container -->
+        <section class="bg-white py-5">
+            <div class="container mx-auto flex items-center flex-wrap pt-2 pb-2">
+                <div class="w-full md:w-1/3 xl:w-1/4 p-6 flex flex-col">
+                    <a href="#">
+                        <img class="hover:grow hover:shadow-2xl" src="assets/Capture.jpg">
+                        <div class="pt-3 flex items-center justify-between">
+                            <p class="text-lg font-bold">Easy Cook</p>
+                            <svg class="h-6 w-6 fill-current text-gray-500 hover:text-black" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                <path d="M12,4.595c-1.104-1.006-2.512-1.558-3.996-1.558c-1.578,0-3.072,0.623-4.213,1.758c-2.353,2.363-2.352,6.059,0.002,8.412 l7.332,7.332c0.17,0.299,0.498,0.492,0.875,0.492c0.322,0,0.609-0.163,0.792-0.409l7.415-7.415 c2.354-2.354,2.354-6.049-0.002-8.416c-1.137-1.131-2.631-1.754-4.209-1.754C14.513,3.037,13.104,3.589,12,4.595z M18.791,6.205 c1.563,1.571,1.564,4.025,0.002,5.588L12,18.586l-6.793-6.793C3.645,10.23,3.646,7.776,5.205,6.209 c0.76-0.756,1.754-1.172,2.799-1.172s2.035,0.416,2.789,1.17l0.5,0.5c0.391,0.391,1.023,0.391,1.414,0l0.5-0.5 C14.719,4.698,17.281,4.702,18.791,6.205z" />
+                            </svg>
+                        </div>
+                        <p class="pt-1 text-gray-600">
+                            <s>Rp38.000</s>
+                        </p>
+                        <p class="uppercase text-red-500">free</p>
+                        <a href="form.html">
+                            <button class="bg-gray-800 hover:bg-gray-600 text-white hover:text-white rounded shadow hover:shadow-lg py-1 w-full">
+                                <p class="mx-auto">Download</p>
+                            </button>
+                        </a>
+                    </a>
+                </div>
+    
+                <div class="w-full md:w-1/3 xl:w-1/4 p-6 flex flex-col">
+                    <a href="#">
+                        <img class="hover:grow hover:shadow-2xl" src="assets/Capture1.jpg">
+                        <div class="pt-3 flex items-center justify-between">
+                            <p class="text-lg font-bold">Codeigniter</p>
+                            <svg class="h-6 w-6 fill-current text-gray-500 hover:text-black" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                <path d="M12,4.595c-1.104-1.006-2.512-1.558-3.996-1.558c-1.578,0-3.072,0.623-4.213,1.758c-2.353,2.363-2.352,6.059,0.002,8.412 l7.332,7.332c0.17,0.299,0.498,0.492,0.875,0.492c0.322,0,0.609-0.163,0.792-0.409l7.415-7.415 c2.354-2.354,2.354-6.049-0.002-8.416c-1.137-1.131-2.631-1.754-4.209-1.754C14.513,3.037,13.104,3.589,12,4.595z M18.791,6.205 c1.563,1.571,1.564,4.025,0.002,5.588L12,18.586l-6.793-6.793C3.645,10.23,3.646,7.776,5.205,6.209 c0.76-0.756,1.754-1.172,2.799-1.172s2.035,0.416,2.789,1.17l0.5,0.5c0.391,0.391,1.023,0.391,1.414,0l0.5-0.5 C14.719,4.698,17.281,4.702,18.791,6.205z" />
+                            </svg>
+                        </div>
+                        <p class="pt-1 text-gray-600">
+                            <s>Rp87.000</s>
+                        </p>
+                        <p class="uppercase text-red-500">free</p>
+                        <a href="form1.html">
+                            <button class="bg-gray-800 hover:bg-gray-600 text-white hover:text-white rounded shadow hover:shadow-lg py-1 w-full">
+                                <p class="mx-auto">Download</p>
+                            </button>
+                        </a>
+                    </a>
+                </div>
+
+                <div class="w-full md:w-1/3 xl:w-1/4 p-6 flex flex-col">
+                    <a href="#">
+                        <img class="hover:grow hover:shadow-2xl" src="assets/Capture2.jpg">
+                        <div class="pt-3 flex items-center justify-between">
+                            <p class="text-lg font-bold">Draw 50 Animals</p>
+                            <svg class="h-6 w-6 fill-current text-gray-500 hover:text-black" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                <path d="M12,4.595c-1.104-1.006-2.512-1.558-3.996-1.558c-1.578,0-3.072,0.623-4.213,1.758c-2.353,2.363-2.352,6.059,0.002,8.412 l7.332,7.332c0.17,0.299,0.498,0.492,0.875,0.492c0.322,0,0.609-0.163,0.792-0.409l7.415-7.415 c2.354-2.354,2.354-6.049-0.002-8.416c-1.137-1.131-2.631-1.754-4.209-1.754C14.513,3.037,13.104,3.589,12,4.595z M18.791,6.205 c1.563,1.571,1.564,4.025,0.002,5.588L12,18.586l-6.793-6.793C3.645,10.23,3.646,7.776,5.205,6.209 c0.76-0.756,1.754-1.172,2.799-1.172s2.035,0.416,2.789,1.17l0.5,0.5c0.391,0.391,1.023,0.391,1.414,0l0.5-0.5 C14.719,4.698,17.281,4.702,18.791,6.205z" />
+                            </svg>
+                        </div>
+                        <p class="pt-1 text-gray-600">
+                            <s>Rp55.000</s>
+                        </p>
+                        <p class="uppercase text-red-500">free</p>
+                        <a href="form2.html">
+                            <button class="bg-gray-800 hover:bg-gray-600 text-white hover:text-white rounded shadow hover:shadow-lg py-1 w-full">
+                                <p class="mx-auto">Download</p>
+                            </button>
+                        </a>
+                    </a>
+                </div>
+
+                <div class="w-full md:w-1/3 xl:w-1/4 p-6 flex flex-col">
+                    <a href="#">
+                        <img class="hover:grow hover:shadow-2xl" src="assets/Capture3.jpg">
+                        <div class="pt-3 flex items-center justify-between">
+                            <p class="text-lg font-bold">4 Langkah Pengampunan</p>
+                            <svg class="h-6 w-6 fill-current text-gray-500 hover:text-black" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                <path d="M12,4.595c-1.104-1.006-2.512-1.558-3.996-1.558c-1.578,0-3.072,0.623-4.213,1.758c-2.353,2.363-2.352,6.059,0.002,8.412 l7.332,7.332c0.17,0.299,0.498,0.492,0.875,0.492c0.322,0,0.609-0.163,0.792-0.409l7.415-7.415 c2.354-2.354,2.354-6.049-0.002-8.416c-1.137-1.131-2.631-1.754-4.209-1.754C14.513,3.037,13.104,3.589,12,4.595z M18.791,6.205 c1.563,1.571,1.564,4.025,0.002,5.588L12,18.586l-6.793-6.793C3.645,10.23,3.646,7.776,5.205,6.209 c0.76-0.756,1.754-1.172,2.799-1.172s2.035,0.416,2.789,1.17l0.5,0.5c0.391,0.391,1.023,0.391,1.414,0l0.5-0.5 C14.719,4.698,17.281,4.702,18.791,6.205z" />
+                            </svg>
+                        </div>
+                        <p class="pt-1 text-gray-600">
+                            <s>Rp40.000</s>
+                        </p>
+                        <p class="uppercase text-red-500">free</p>
+                        <a href="form3.html">
+                            <button class="bg-gray-800 hover:bg-gray-600 text-white hover:text-white rounded shadow hover:shadow-lg py-1 w-full">
+                                <p class="mx-auto">Download</p>
+                            </button>
+                        </a>
+                    </a>
+                </div>
+
+                <div class="w-full md:w-1/3 xl:w-1/4 p-6 flex flex-col">
+                    <a href="#">
+                        <img class="hover:grow hover:shadow-2xl" src="assets/Capture4.jpg">
+                        <div class="pt-3 flex items-center justify-between">
+                            <p class="text-lg font-bold">Phyton</p>
+                            <svg class="h-6 w-6 fill-current text-gray-500 hover:text-black" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                <path d="M12,4.595c-1.104-1.006-2.512-1.558-3.996-1.558c-1.578,0-3.072,0.623-4.213,1.758c-2.353,2.363-2.352,6.059,0.002,8.412 l7.332,7.332c0.17,0.299,0.498,0.492,0.875,0.492c0.322,0,0.609-0.163,0.792-0.409l7.415-7.415 c2.354-2.354,2.354-6.049-0.002-8.416c-1.137-1.131-2.631-1.754-4.209-1.754C14.513,3.037,13.104,3.589,12,4.595z M18.791,6.205 c1.563,1.571,1.564,4.025,0.002,5.588L12,18.586l-6.793-6.793C3.645,10.23,3.646,7.776,5.205,6.209 c0.76-0.756,1.754-1.172,2.799-1.172s2.035,0.416,2.789,1.17l0.5,0.5c0.391,0.391,1.023,0.391,1.414,0l0.5-0.5 C14.719,4.698,17.281,4.702,18.791,6.205z" />
+                            </svg>
+                        </div>
+                        <p class="pt-1 text-gray-600">
+                            <s>Rp48.000</s>
+                        </p>
+                        <p class="uppercase text-red-500">free</p>
+                        <a href="form4.html">
+                            <button class="bg-gray-800 hover:bg-gray-600 text-white hover:text-white rounded shadow hover:shadow-lg py-1 w-full">
+                                <p class="mx-auto">Download</p>
+                            </button>
+                        </a>
+                    </a>
+                </div>
+
+                <div class="w-full md:w-1/3 xl:w-1/4 p-6 flex flex-col">
+                    <a href="#">
+                        <img class="hover:grow hover:shadow-2xl" src="assets/Capture5.jpg">
+                        <div class="pt-3 flex items-center justify-between">
+                            <p class="text-lg font-bold">India Rajasthan</p>
+                            <svg class="h-6 w-6 fill-current text-gray-500 hover:text-black" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                <path d="M12,4.595c-1.104-1.006-2.512-1.558-3.996-1.558c-1.578,0-3.072,0.623-4.213,1.758c-2.353,2.363-2.352,6.059,0.002,8.412 l7.332,7.332c0.17,0.299,0.498,0.492,0.875,0.492c0.322,0,0.609-0.163,0.792-0.409l7.415-7.415 c2.354-2.354,2.354-6.049-0.002-8.416c-1.137-1.131-2.631-1.754-4.209-1.754C14.513,3.037,13.104,3.589,12,4.595z M18.791,6.205 c1.563,1.571,1.564,4.025,0.002,5.588L12,18.586l-6.793-6.793C3.645,10.23,3.646,7.776,5.205,6.209 c0.76-0.756,1.754-1.172,2.799-1.172s2.035,0.416,2.789,1.17l0.5,0.5c0.391,0.391,1.023,0.391,1.414,0l0.5-0.5 C14.719,4.698,17.281,4.702,18.791,6.205z" />
+                            </svg>
+                        </div>
+                        <p class="pt-1 text-gray-600">
+                            <s>Rp68.000</s>
+                        </p>
+                        <p class="uppercase text-red-500">free</p>
+                        <a href="form5.html">
+                            <button class="bg-gray-800 hover:bg-gray-600 text-white hover:text-white rounded shadow hover:shadow-lg py-1 w-full">
+                                <p class="mx-auto">Download</p>
+                            </button>
+                        </a>
+                    </a>
+                </div>
+
+                <div class="w-full md:w-1/3 xl:w-1/4 p-6 flex flex-col">
+                    <a href="#">
+                        <img class="hover:grow hover:shadow-2xl" src="assets/Capture6.jpg">
+                        <div class="pt-3 flex items-center justify-between">
+                            <p class="text-lg font-bold">Pengantar Hukum Indonesia</p>
+                            <svg class="h-6 w-6 fill-current text-gray-500 hover:text-black" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                <path d="M12,4.595c-1.104-1.006-2.512-1.558-3.996-1.558c-1.578,0-3.072,0.623-4.213,1.758c-2.353,2.363-2.352,6.059,0.002,8.412 l7.332,7.332c0.17,0.299,0.498,0.492,0.875,0.492c0.322,0,0.609-0.163,0.792-0.409l7.415-7.415 c2.354-2.354,2.354-6.049-0.002-8.416c-1.137-1.131-2.631-1.754-4.209-1.754C14.513,3.037,13.104,3.589,12,4.595z M18.791,6.205 c1.563,1.571,1.564,4.025,0.002,5.588L12,18.586l-6.793-6.793C3.645,10.23,3.646,7.776,5.205,6.209 c0.76-0.756,1.754-1.172,2.799-1.172s2.035,0.416,2.789,1.17l0.5,0.5c0.391,0.391,1.023,0.391,1.414,0l0.5-0.5 C14.719,4.698,17.281,4.702,18.791,6.205z" />
+                            </svg>
+                        </div>
+                        <p class="pt-1 text-gray-600">
+                            <s>Rp70.000</s>
+                        </p>
+                        <p class="uppercase text-red-500">free</p>
+                        <a href="form6.html">
+                            <button class="bg-gray-800 hover:bg-gray-600 text-white hover:text-white rounded shadow hover:shadow-lg py-1 w-full">
+                                <p class="mx-auto">Download</p>
+                            </button>
+                        </a>
+                    </a>
+                </div>
+
+                <div class="w-full md:w-1/3 xl:w-1/4 p-6 flex flex-col">
+                    <a href="#">
+                        <img class="hover:grow hover:shadow-2xl" src="assets/Capture7.jpg">
+                        <div class="pt-3 flex items-center justify-between">
+                            <p class="text-lg font-bold">100 Weight Loss Tips</p>
+                            <svg class="h-6 w-6 fill-current text-gray-500 hover:text-black" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                <path d="M12,4.595c-1.104-1.006-2.512-1.558-3.996-1.558c-1.578,0-3.072,0.623-4.213,1.758c-2.353,2.363-2.352,6.059,0.002,8.412 l7.332,7.332c0.17,0.299,0.498,0.492,0.875,0.492c0.322,0,0.609-0.163,0.792-0.409l7.415-7.415 c2.354-2.354,2.354-6.049-0.002-8.416c-1.137-1.131-2.631-1.754-4.209-1.754C14.513,3.037,13.104,3.589,12,4.595z M18.791,6.205 c1.563,1.571,1.564,4.025,0.002,5.588L12,18.586l-6.793-6.793C3.645,10.23,3.646,7.776,5.205,6.209 c0.76-0.756,1.754-1.172,2.799-1.172s2.035,0.416,2.789,1.17l0.5,0.5c0.391,0.391,1.023,0.391,1.414,0l0.5-0.5 C14.719,4.698,17.281,4.702,18.791,6.205z" />
+                            </svg>
+                        </div>
+                        <p class="pt-1 text-gray-600">
+                            <s>Rp56.000</s>
+                        </p>
+                        <p class="uppercase text-red-500">free</p>
+                        <a href="form7.html">
+                            <button class="bg-gray-800 hover:bg-gray-600 text-white hover:text-white rounded shadow hover:shadow-lg py-1 w-full">
+                                <p class="mx-auto">Download</p>
+                            </button>
+                        </a>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Title -->
+        <section class="bg-scroll border-b p-5" style="background-image: url(assets/menu_background.jpg)">
+            <div class="container max-w-5xl mx-auto m-8">
+              <h2
+                class="w-full my-2 text-5xl font-black leading-tight text-center text-gray-400"
+              >
+                eBook Free
+              </h2>
+              <div class="w-full mb-4">
+                <div
+                  class="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t"
+                ></div>
+              </div>
+      
+              <div class="flex flex-wrap">
+                <div class="w-5/6 sm:w-1/2 p-6">
+                  <h3 class="text-3xl text-gray-400 font-bold leading-none mb-3">
+                    Increase Your Insights by Reading
+                  </h3>
+                  <p class="text-white mb-8">
+                    It cannot be denied that the sentence "Books Are the Window of Knowledge" is true. Therefore, take a moment to add to your insight by reading.<br /><br />
+                  </p>
+                </div>
+                <div class="w-full sm:w-1/2 p-6">
+                  <!--svg-->
+                </div>
+              </div>
+      
+              <div class="flex flex-wrap flex-col-reverse sm:flex-row">
+                <div class="w-full sm:w-1/2 p-6 mt-6">
+                  <!--svg-->
+                </div>
+                <div class="w-full sm:w-1/2 p-6 mt-6">
+                  <div class="align-middle">
+                    <h3 class="text-3xl text-gray-400 font-bold leading-none mb-3">
+                      Ease activities with eBooks
+                    </h3>
+                    <p class="text-white mb-5">
+                      With eBooks you don't have to bother carrying too heavy a book when you want to travel and want to read for a while. eBooks can be read anywhere via your cellphone and of course very practical.<br /><br />
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Semi Footer -->
+          <section class="w-full mx-auto text-center pt-6 pb-12">
+            <h2 class="w-full my-2 text-5xl font-black leading-tight text-center text-gray-600">
+              Connect with the Author
+            </h2>
+            <div class="w-full mb-4">
+              <div
+                class="h-1 mx-auto bg-white w-1/6 opacity-25 my-0 py-0 rounded-t"
+              ></div>
+            </div>
+            <a href="contact.html">
+              <button class="mx-auto font-bold lg:mx-0 hover:bg-gray-800 bg-gray-500 text-white rounded my-6 py-2 px-6 shadow opcaity-75 text-lg">
+                Connect
+              </button>
+            </a>
+          </section>
+      
+          <!--Footer-->
+          <footer class="bg-gray-900">
+            <div class="container mx-auto mt-8 px-8">
+              <div class="w-full flex flex-col md:flex-row py-6">
+                <div class="flex-1 mb-6">
+                  <a class="text-white no-underline hover:no-underline font-bold text-2xl lg:text-4xl" href="#">
+                    eBook Free
+                  </a>
+                </div>
+      
+                <div class="flex-1">
+                  <p class="uppercase font-extrabold text-gray-500 md:mb-6">Links</p>
+                  <ul class="list-reset mb-6">
+                    <li class="mt-2 inline-block mr-2 md:block md:mr-0">
+                      <a
+                        href="#"
+                        class="font-light no-underline hover:underline text-gray-300 hover:text-orange-500"
+                        >FAQ</a
+                      >
+                    </li>
+                    <li class="mt-2 inline-block mr-2 md:block md:mr-0">
+                      <a
+                        href="#"
+                        class="font-light no-underline hover:underline text-gray-300 hover:text-orange-500"
+                        >Help</a
+                      >
+                    </li>
+                    <li class="mt-2 inline-block mr-2 md:block md:mr-0">
+                      <a
+                        href="#"
+                        class="font-light no-underline hover:underline text-gray-300 hover:text-orange-500"
+                        >Support</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+                <div class="flex-1">
+                  <p class="uppercase font-extrabold text-gray-500 md:mb-6">Legal</p>
+                  <ul class="list-reset mb-6">
+                    <li class="mt-2 inline-block mr-2 md:block md:mr-0">
+                      <a
+                        href="#"
+                        class="font-light no-underline hover:underline text-gray-300 hover:text-orange-500"
+                        >Terms</a
+                      >
+                    </li>
+                    <li class="mt-2 inline-block mr-2 md:block md:mr-0">
+                      <a
+                        href="#"
+                        class="font-light no-underline hover:underline text-gray-300 hover:text-orange-500"
+                        >Privacy</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+                <div class="flex-1">
+                  <p class="uppercase font-extrabold text-gray-500 md:mb-6">Social</p>
+                  <ul class="list-reset mb-6">
+                    <li class="mt-2 inline-block mr-2 md:block md:mr-0">
+                      <a
+                        href="https://www.facebook.com/nesta.alsya.1"
+                        class="font-light no-underline hover:underline text-gray-300 hover:text-orange-500"
+                        >Facebook</a
+                      >
+                    </li>
+                    <li class="mt-2 inline-block mr-2 md:block md:mr-0">
+                      <a
+                        href="https://instagram.com/nesta.alsya?igshid=1k7xo51j59rr9"
+                        class="font-light no-underline hover:underline text-gray-300 hover:text-orange-500"
+                        >Instagram</a
+                      >
+                    </li>
+                    <li class="mt-2 inline-block mr-2 md:block md:mr-0">
+                      <a
+                        href="https://twitter.com/AlsyaNesta"
+                        class="font-light no-underline hover:underline text-gray-300 hover:text-orange-500"
+                        >Twitter</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+                <div class="flex-1">
+                  <p class="uppercase font-extrabold text-gray-500 md:mb-6">
+                    Company
+                  </p>
+                    <li class="mt-2 inline-block mr-2 md:block md:mr-0">
+                      <a
+                        href="about.html"
+                        class="font-light no-underline hover:underline text-gray-300 hover:text-orange-500"
+                        >About</a
+                      >
+                    </li>
+                    <li class="mt-2 inline-block mr-2 md:block md:mr-0">
+                      <a
+                        href="contact.html"
+                        class="font-light no-underline hover:underline text-gray-300 hover:text-orange-500"
+                        >Contact</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </footer>
+      
+    </body>
+</html>
